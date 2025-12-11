@@ -1,0 +1,141 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+class Main extends JFrame {
+
+    public Main(){
+        super("title");
+        setSize(750, 750);
+        Button button1 = new Button("1");
+        Button button2 = new Button("2");
+        Button button3 = new Button("3");
+        Button button4 = new Button("4");
+        Button button5 = new Button("5");
+        Button button6 = new Button("6");
+        Button button7 = new Button("7");
+        Button button8 = new Button("8");
+        Button button9 = new Button("9");
+        Button button0 = new Button("0");
+        Button button_clean = new Button("C");
+        Button button_plus = new Button("+");
+        Button button_minus = new Button("+");
+        Button button_umnojit = new Button("+");
+        Button button_ravno = new Button("+");
+        setLayout(null);
+        JTextField textField;
+        textField = new JTextField(20);
+        textField.setText("");
+        textField.setBounds(50,0, 350, 100);
+        button1.setBounds(100, 100, 50, 50);
+        button2.setBounds(200, 100, 50, 50);
+        button3.setBounds(300, 100, 50, 50);
+        button4.setBounds(100, 200, 50, 50);
+        button5.setBounds(200, 200, 50, 50);
+        button6.setBounds(300, 200, 50, 50);
+        button7.setBounds(100, 300, 50, 50);
+        button8.setBounds(200, 300, 50, 50);
+        button9.setBounds(300, 300, 50, 50);
+        button0.setBounds(200, 400, 50, 50);
+        button_clean.setBounds(100, 400, 50, 50);
+        button_plus.setBounds(400, 200, 50, 50);
+        button_minus.setBounds(400, 200, 50, 50);
+        button_umnojit.setBounds(400, 200, 50, 50);
+        button_ravno.setBounds(400, 200, 50, 50);
+        add(button1);
+        add(button2);
+        add(button3);
+        add(button4);
+        add(button5);
+        add(button6);
+        add(button7);
+        add(button8);
+        add(button9);
+        add(button0);
+        add(button_clean);
+        add(button_plus);
+        add(button_minus);
+        add(button_umnojit);
+        add(button_ravno);
+        add(textField);
+
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "1");
+            }
+        });
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "2");
+            }
+        });
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "3");
+            }
+        });
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "4");
+            }
+        });
+        button5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "5");
+            }
+        });
+        button6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "6");
+            }
+        });
+        button7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "7");
+            }
+        });
+        button8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "8");
+            }
+        });
+        button9.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "9");
+            }
+        });
+        button0.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "0");
+            }
+        });
+        button_clean.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText("");
+            }
+        });
+        button_plus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText(textField.getText() + "+");
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        Main app = new Main();
+        app.setVisible(true);
+    }
+}
