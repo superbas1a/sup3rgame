@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 class Main extends JFrame {
 
@@ -64,59 +65,132 @@ class Main extends JFrame {
         add(textField);
         final int[] plusflag = {0};
         final int[] minusflag = {0};
+        final int[] umnojitflag = {0};
+        final int[] delitflag = {0};
+        final int[][] first = {{0}};
+        final int[][] second = {{0}};
+        final int[][] flag = {{0}};
+        final int[][] itog = {{0}};
+
+
+
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText(textField.getText() + "1");
+                if (flag[0][0] == 0) {
+                    first[0][0] = first[0][0] * 10 + 1;
+                }
+                if (flag[0][0] == 1) {
+                    second[0][0] = second[0][0] * 10 + 1;
+                }
             }
         });
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText(textField.getText() + "2");
+                if (flag[0][0] == 0) {
+                    first[0][0] = first[0][0] * 10 + 2;
+                }
+                if (flag[0][0] == 1) {
+                    second[0][0] = second[0][0] * 10 + 2;
+                }
             }
         });
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText(textField.getText() + "3");
+                if (flag[0][0] == 0) {
+                    first[0][0] = first[0][0] * 10 + 3;
+                }
+                if (flag[0][0] == 1) {
+                    second[0][0] = second[0][0] * 10 + 3;
+                }
             }
         });
         button4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText(textField.getText() + "4");
+                if (flag[0][0] == 0) {
+                    first[0][0] = first[0][0] * 10 + 4;
+                }
+                if (flag[0][0] == 1) {
+                    second[0][0] = second[0][0] * 10 + 4;
+                }
             }
         });
         button5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText(textField.getText() + "5");
+                if (flag[0][0] == 0) {
+                    first[0][0] = first[0][0] * 10 + 5;
+                }
+                if (flag[0][0] == 1) {
+                    second[0][0] = second[0][0] * 10 + 5;
+                }
             }
         });
         button6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText(textField.getText() + "6");
+                if (flag[0][0] == 0) {
+                    first[0][0] = first[0][0] * 10 + 6;
+                }
+                if (flag[0][0] == 1) {
+                    second[0][0] = second[0][0] * 10 + 6;
+                }
             }
         });
         button7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText(textField.getText() + "7");
+                if (flag[0][0] == 0) {
+                    first[0][0] = first[0][0] * 10 + 7;
+                }
+                if (flag[0][0] == 1) {
+                    second[0][0] = second[0][0] * 10 + 7;
+                }
             }
         });
         button8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText(textField.getText() + "8");
+                if (flag[0][0] == 0) {
+                    first[0][0] = first[0][0] * 10 + 8;
+                }
+                if (flag[0][0] == 1) {
+                    second[0][0] = second[0][0] * 10 + 8;
+                }
             }
         });
         button9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText(textField.getText() + "9");
+                if (flag[0][0] == 0) {
+                    first[0][0] = first[0][0] * 10 + 9;
+                }
+                if (flag[0][0] == 1) {
+                    second[0][0] = second[0][0] * 10 + 9;
+                }
             }
         });
         button0.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText(textField.getText() + "0");
+                if (flag[0][0] == 0) {
+                    first[0][0] = first[0][0] * 10;
+                }
+                if (flag[0][0] == 1) {
+                    second[0][0] = second[0][0] * 10;
+                }
             }
         });
         button_clean.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText("");
+                first[0] = new int[]{0};
+                second[0] = new int[]{0};
+                flag[0] = new int[]{0};
+
             }
         });
         button_plus.addActionListener(new ActionListener() {
@@ -124,32 +198,53 @@ class Main extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText("+");
                 plusflag[0]++;
+                flag[0][0]++;
             }
         });
         button_minus.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {textField.setText("-");
                 minusflag[0]++;
+                flag[0][0]++;
             }
         });
         button_umnojit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 textField.setText("*");
-            }
-        });
-        button_ravno.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                textField.setText("=");
+                umnojitflag[0]++;
+                flag[0][0]++;
             }
         });
         button_delit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 textField.setText("/");
+                delitflag[0]++;
+                flag[0][0]++;
             }
         });
+        button_ravno.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (plusflag[0] == 1) {
+                    itog[0] = new int[]{first[0][0] + second[0][0]};
+                }
+                if (minusflag[0] == 1) {
+                    itog[0] = new int[]{first[0][0] - second[0][0]};
+                }
+                if (umnojitflag[0] == 1) {
+                    itog[0] = new int[]{first[0][0] * second[0][0]};
+                }
+                if (delitflag[0] == 1) {
+                    itog[0] = new int[]{first[0][0] / second[0][0]};
+
+                }
+                    textField.setText(Arrays.toString(itog[0]));
+
+            }
+        });
+
 
     }
 
