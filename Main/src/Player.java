@@ -9,9 +9,8 @@ public class Player {
     int width = 40;
     int height = 40;
 
-    // Параметры скорости
-    int normalSpeed = 3;
-    int sprintSpeed = 7;
+    int normalSpeed = 2;
+    int sprintSpeed = 5;
 
     KeyHandler keyHandler;
     ArrayList<Wall> walls;
@@ -24,7 +23,7 @@ public class Player {
     }
 
     public void update() {
-        // Логика скорости остается: бежим, если нажат Shift
+
         int currentSpeed;
         if (keyHandler.shift) {
             currentSpeed = sprintSpeed;
@@ -56,7 +55,6 @@ public class Player {
             y = nextY;
         }
 
-        // Границы экрана
         if (x < 0) x = 0;
         if (y < 0) y = 0;
         if (x > 800 - width) x = 800 - width;
@@ -64,11 +62,11 @@ public class Player {
     }
 
     public void draw(Graphics g) {
-        // Возвращаем один постоянный цвет без условий
+
         g.setColor(Color.GREEN);
         g.fillRect(x, y, width, height);
 
-        // Контур остается для четкости
+
         g.setColor(Color.BLACK);
         g.drawRect(x, y, width, height);
     }
