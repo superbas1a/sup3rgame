@@ -18,7 +18,7 @@ public class Main extends JFrame {
 
         setVisible(true);
 
-        gamePanel.requestFocusInWindow();
+        gamePanel.requestFocusInWindow(); // ВАЖНО
         gamePanel.startGame();
     }
 

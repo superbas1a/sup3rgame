@@ -3,7 +3,7 @@ import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
 
-    public boolean up, down, left, right, shift;
+    public boolean up, down, left, right, shift; // Добавили shift
 
     @Override
     public void keyPressed(KeyEvent e) {
@@ -13,7 +13,7 @@ public class KeyHandler implements KeyListener {
         if (k == KeyEvent.VK_S) down = true;
         if (k == KeyEvent.VK_A) left = true;
         if (k == KeyEvent.VK_D) right = true;
-        if (k == KeyEvent.VK_SHIFT) shift = true;
+        if (k == KeyEvent.VK_SHIFT) shift = true; // Фиксируем нажатие Shift
     }
 
     @Override
@@ -24,7 +24,7 @@ public class KeyHandler implements KeyListener {
         if (k == KeyEvent.VK_S) down = false;
         if (k == KeyEvent.VK_A) left = false;
         if (k == KeyEvent.VK_D) right = false;
-        if (k == KeyEvent.VK_SHIFT) shift = false;
+        if (k == KeyEvent.VK_SHIFT) shift = false; // Фиксируем отпускание Shift
     }
 
     @Override
