@@ -10,12 +10,11 @@ public class Main extends JFrame {
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
-        setLayout(null);
 
         gamePanel = new GamePanel();
-        gamePanel.setBounds(0, 0, 800, 600);
         add(gamePanel);
-
+        pack();
+        setSize(800, 600);
         setVisible(true);
 
         gamePanel.requestFocusInWindow(); // ВАЖНО
