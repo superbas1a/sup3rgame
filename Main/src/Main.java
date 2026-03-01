@@ -4,7 +4,7 @@ public class Main extends JFrame {
     GamePanel gamePanel;
 
     public Main() {
-        super("My 2D Game - World & Camera");
+        super("igra");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
 
